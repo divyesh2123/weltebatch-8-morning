@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <ul id="display"></ul>
+    <script>
+
+            let cities= ["Vadodara","pune"];
+
+            let p = cities.map(function(v){
+
+                return "<li>"+ v + "</li>"
+            })
+
+        
+            console.log(p);
+
+
+            document.getElementById("display").innerHTML = p.join("");
+           // console.log(p);
+
+
+    </script>
+    
+</body>
+</html>

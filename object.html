@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <input type="number" id="myinput" value="" />
+    <button onclick="checkNumber()">Check Number</button>
+    <div id="display"></div>
+
+    <script>
+
+     
+        
+        function checkNumber()
+        {
+            let number = document.getElementById("myinput").value;
+         
+            if(number>=70)
+            {
+                console.log("distinction")
+            }
+
+            else if(number <60 && number >=50)
+            {
+                console.log("2");
+            }
+
+           else if(number>=60 && number <70)
+            {
+
+                console.log("first class");
+            }
+
+          
+            else if(number <50 && number >=35)
+            {
+                console.log("pass");
+            }
+            else
+            {
+                console.log("failed")
+            }
+       
+        }
+
+        
+       
+
+
+    </script>
+    
+</body>
+</html>

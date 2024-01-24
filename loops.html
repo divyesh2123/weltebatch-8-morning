@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div id="display" onclick="readMore();"></div>
+
+    
+
+    <script>
+
+        let d = "this is the javascript this is the javascript this is the javascript this is the javascript this is the javascript this is the javascript this is the javascript this is the javascript this is the javascript this is the javascript this is the javascript this is the javascript this is the javascript this is the javascript this is the javascript";
+
+        let isreadMore= true;
+
+        function readMore()
+        {
+            
+
+            if(isreadMore == true)
+            {
+                document.getElementById("display").innerHTML = d.slice(0,20) + '..readMore';
+            }
+            else
+            {
+                document.getElementById("display").innerHTML = d + '..readless';
+
+            }
+
+            isreadMore = !isreadMore;
+
+        }
+
+
+        readMore();
+        //document.getElementById("display").innerHTML += "This is the javascript";
+
+       
+        // for(let row =4;row>=1;row=row-1)
+        // {
+        //     let str = '';
+
+        //    for(let column=1;column<=row;column=column+1)
+        //    {
+        //         str += row
+
+        //    }
+
+        //    document.getElementById("display").innerHTML
+        //     += str + "<br/>";
+
+          
+        // }
+
+
+    </script>
+    
+</body>
+</html>

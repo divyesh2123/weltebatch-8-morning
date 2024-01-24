@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="fullname" />
+
+    <button onclick="displayData()">Name Display</button>
+
+    <script>
+        
+        function displayData()
+        {
+            let mystrign = document.getElementById("fullname").value;
+
+
+let d = mystrign.substring(0,1) +
+ "" + mystrign.substr(mystrign.indexOf(' ')+1,1) + "" + 
+  mystrign.substr(mystrign.indexOf(' ',
+  mystrign.indexOf(' ')+1)+1,1);
+
+
+  let d1=mystrign;
+  let p = d1.includes("weltec");
+
+  console.log(p);
+
+        }
+      
+
+     
+        
+      
+      // console.log(d1);
+
+
+    </script>
+    
+</body>
+</html>
