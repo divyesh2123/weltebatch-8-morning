@@ -269,14 +269,39 @@ function addToCart(index)
 {
     const selectedProduct = products[index]
 
-    console.log(selectedProduct);
+    //console.log(selectedProduct);
+
+    let checkitemexitornot = cart.find(function(v){
 
 
-    cart.push(selectedProduct)
+        return v.item.id == selectedProduct.id;
+    })
 
+    if(!checkitemexitornot )
+    {
+        cart.push({item : selectedProduct, count : 1})
+    }
+    else
+    {
+        checkitemexitornot.count = checkitemexitornot.count+1;
+    }
 
+    
+
+    console.log(cart);
 
     document.getElementById("navtext").innerHTML = cart.length;
+
+
+    let finalprice = cart.reduce(function(pre,v){
+
+        return pre +  v.item.price * v.count;
+
+    },0);
+
+    console.log(finalprice);
+
+
 }
 
 display();
